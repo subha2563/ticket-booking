@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Ticket Reservation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Online Ticket Reservation</h1>
+  </header>
+  <main>
+    <section id="start">
+      <h2>Welcome</h2>
+      <button onclick="navigateTo('login')">Login</button>
+      <button onclick="navigateTo('register')">Register</button>
+    </section>
+    <section id="register" class="hidden">
+      <h2>Register</h2>
+      <form id="registerForm">
+        <input type="text" placeholder="Username" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Register</button>
+      </form>
+    </section>
+    <section id="login" class="hidden">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+    <section id="booking" class="hidden">
+      <h2>Book a Flight</h2>
+      <form id="flightForm">
+        <input type="text" placeholder="From" required>
+        <input type="text" placeholder="To" required>
+        <input type="date" required>
+        <button type="submit">Search Flights</button>
+      </form>
+    </section>
+    <section id="confirm" class="hidden">
+      <h2>Confirm Booking</h2>
+      <button onclick="confirmBooking()">Confirm</button>
+    </section>
+    <section id="end" class="hidden">
+      <h2>Booking Successful!</h2>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
